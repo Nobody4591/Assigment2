@@ -11,8 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
+        log.d("hellow world");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     public void button1(View view) {
         Intent intent = new Intent(MainActivity.this,MainActivity2.class);
         startActivity(intent);
-
 
     }
     public void button2(View view) {
