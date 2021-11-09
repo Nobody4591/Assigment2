@@ -14,11 +14,12 @@ public class MainActivity3 extends AppCompatActivity {
     ArrayList<ArrayList<String>> table;
     String answer;
 
-    table = new ArrayList<ArrayList<String>>();
+    public MainActivity3(){
+        table = new ArrayList<ArrayList<String>>();
         for(int i=0;i<7;i++)
-    {
-        table.add(new ArrayList<String>());
-    }
+        {
+            table.add(new ArrayList<String>());
+        }
         table.get(0).add("حلقیہ");
         table.get(0).add("إ");
         table.get(0).add("ۃ");
@@ -56,6 +57,8 @@ public class MainActivity3 extends AppCompatActivity {
         table.get(6).add("م");
         table.get(6).add("ن");
 
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -66,25 +69,25 @@ public class MainActivity3 extends AppCompatActivity {
         type = getIntent().getStringExtra("btn");
 
         if(type=="halqiyah"){
-
+            //practiceHalqia();
         }
         else if(type=="niteeyah"){
-
+            //practiceNiteeyah
         }
         else if(type=="gunnah"){
-
+            //practiceGunnah
         }
         else if(type=="lisaveyah"){
-
+            //practiceLisaveyah
         }
         else if(type=="shajariyah"){
-
+            //practiceShajariyah
         }
         else if(type=="tarfiyah"){
-
+            //practiceTarfiyah
         }
         else{
-
+            //practice
         }
     }
 }
