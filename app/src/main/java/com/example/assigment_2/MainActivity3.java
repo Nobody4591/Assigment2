@@ -6,9 +6,55 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity3 extends AppCompatActivity {
 
     String type;
+    ArrayList<ArrayList<String>> table;
+    String answer;
+
+    table = new ArrayList<ArrayList<String>>();
+        for(int i=0;i<7;i++)
+    {
+        table.add(new ArrayList<String>());
+    }
+        table.get(0).add("حلقیہ");
+        table.get(0).add("إ");
+        table.get(0).add("ۃ");
+        table.get(0).add("ح");
+        table.get(0).add("ع");
+        table.get(0).add("غ");
+        table.get(0).add("خ");
+
+        table.get(1).add("لاہاتیہ");
+        table.get(1).add("ک");
+        table.get(1).add("ق");
+
+        table.get(2).add("شجریہ حافیہ");
+        table.get(2).add("ج");
+        table.get(2).add("ش");
+        table.get(2).add("ی");
+        table.get(2).add("ض");
+
+        table.get(3).add("ترفیہ");
+        table.get(3).add("ل");
+        table.get(3).add("ن");
+        table.get(3).add("ر");
+
+        table.get(4).add("نیت اییہ");
+        table.get(4).add("ت");
+        table.get(4).add("د");
+        table.get(4).add("ط");
+
+        table.get(5).add("لیساویہ");
+        table.get(5).add("ظ");
+        table.get(5).add("ذ");
+        table.get(5).add("ث");
+
+        table.get(6).add("گناں");
+        table.get(6).add("م");
+        table.get(6).add("ن");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +63,28 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-
-
         type = getIntent().getStringExtra("btn");
-        Button btn = (Button)findViewById(R.id.button3);
-        btn.setText("Temp");
+
+        if(type=="halqiyah"){
+
+        }
+        else if(type=="niteeyah"){
+
+        }
+        else if(type=="gunnah"){
+
+        }
+        else if(type=="lisaveyah"){
+
+        }
+        else if(type=="shajariyah"){
+
+        }
+        else if(type=="tarfiyah"){
+
+        }
+        else{
+
+        }
     }
 }
