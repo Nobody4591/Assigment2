@@ -68,26 +68,50 @@ public class MainActivity3 extends AppCompatActivity {
 
         type = getIntent().getStringExtra("btn");
 
-        if(type=="halqiyah"){
-            //practiceHalqia();
+        if(type.equals("halqiyah")){
+            practiceHalqia();
         }
         else if(type=="niteeyah"){
-            //practiceNiteeyah
+            practiceNiteeyah();
         }
         else if(type=="gunnah"){
-            //practiceGunnah
+            practiceGunnah();
         }
         else if(type=="lisaveyah"){
-            //practiceLisaveyah
+            practiceLisaveyah();
         }
         else if(type=="shajariyah"){
-            //practiceShajariyah
+            practiceShajariyah();
         }
         else if(type=="tarfiyah"){
-            //practiceTarfiyah
+            practiceTarfiyah();
         }
         else{
-            //practice
+            practiceLahatiyah();
         }
+    }
+    public void practiceHalqia(){
+        TextView textView = findViewById(R.id.textView);
+        textView.setText("Which one of the following of is the "+type);
+
+
+    }
+    public void practiceNiteeyah(){
+
+    }
+    public void practiceGunnah(){
+
+    }
+    public void practiceLisaveyah(){
+
+    }
+    public void practiceShajariyah(){
+
+    }
+    public void practiceTarfiyah(){
+
+    }
+    public void practiceLahatiyah(){
+
     }
 }
