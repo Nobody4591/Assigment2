@@ -3,60 +3,71 @@ package com.example.assigment_2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity3 extends AppCompatActivity {
 
     String type;
-    ArrayList<ArrayList<String>> table;
+    String[] halqiyah;
+    String[] lahiyah;
+    String[] shajriyah;
+    String[] tarfiyah;
+    String[] niyat;
+    String[] lasawiyah;
+    String[] gunnah;
     String answer;
 
     public MainActivity3(){
-        table = new ArrayList<ArrayList<String>>();
-        for(int i=0;i<7;i++)
-        {
-            table.add(new ArrayList<String>());
-        }
-        table.get(0).add("حلقیہ");
-        table.get(0).add("إ");
-        table.get(0).add("ۃ");
-        table.get(0).add("ح");
-        table.get(0).add("ع");
-        table.get(0).add("غ");
-        table.get(0).add("خ");
+        halqiyah= new String[6];
 
-        table.get(1).add("لاہاتیہ");
-        table.get(1).add("ک");
-        table.get(1).add("ق");
 
-        table.get(2).add("شجریہ حافیہ");
-        table.get(2).add("ج");
-        table.get(2).add("ش");
-        table.get(2).add("ی");
-        table.get(2).add("ض");
+        halqiyah[0]="إ";
+        halqiyah[1]="ۃ";
+        halqiyah[2]="ح";
+        halqiyah[3]="ع";
+        halqiyah[4]="غ";
+        halqiyah[5]="خ";
 
-        table.get(3).add("ترفیہ");
-        table.get(3).add("ل");
-        table.get(3).add("ن");
-        table.get(3).add("ر");
+        lahiyah= new String[3];
 
-        table.get(4).add("نیت اییہ");
-        table.get(4).add("ت");
-        table.get(4).add("د");
-        table.get(4).add("ط");
+        lahiyah[0]="ک";
+        lahiyah[1]="ق";
 
-        table.get(5).add("لیساویہ");
-        table.get(5).add("ظ");
-        table.get(5).add("ذ");
-        table.get(5).add("ث");
+        shajriyah= new String[4];
 
-        table.get(6).add("گناں");
-        table.get(6).add("م");
-        table.get(6).add("ن");
+        shajriyah[0]="ج";
+        shajriyah[1]="ش";
+        shajriyah[2]="ی";
+        shajriyah[3]="ض";
+
+        tarfiyah= new String[3];
+
+        tarfiyah[0]=("ل");
+        tarfiyah[1]=("ن");
+        tarfiyah[2]=("ر");
+
+        niyat= new String[3];
+
+        niyat[0]="ت";
+        niyat[1]="د";
+        niyat[2]="ط";
+
+        lasawiyah= new String[3];
+        lasawiyah[0]="ظ";
+        lasawiyah[1]="ذ";
+        lasawiyah[2]="ث";
+
+        gunnah= new String[2];
+
+        gunnah[0]="م";
+        gunnah[1]="ن";
 
     }
 
@@ -91,12 +102,29 @@ public class MainActivity3 extends AppCompatActivity {
             practiceLahatiyah();
         }
     }
+    public String ansString;
     public void practiceHalqia(){
         TextView textView = findViewById(R.id.textView);
         textView.setText("Which one of the following of is the "+type);
 
 
+        RadioButton radioButton1 = findViewById(R.id.radioButton1);
+        radioButton1.setText("إ");
+
+
+        RadioButton radioButton2 = findViewById(R.id.radioButton2);
+        radioButton2.setText("ل");
+
+        RadioButton radioButton3 = findViewById(R.id.radioButton3);
+        radioButton3.setText("د");
+
+        RadioButton radioButton4 = findViewById(R.id.radioButton4);
+        radioButton4.setText("ن");
+
+
+
     }
+
     public void practiceNiteeyah(){
 
     }
@@ -113,6 +141,21 @@ public class MainActivity3 extends AppCompatActivity {
 
     }
     public void practiceLahatiyah(){
+
+    }
+
+    public void submitMethod(View view) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radio);
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+
+        RadioButton radioButton = (RadioButton) findViewById(selectedId);
+
+
+        Toast.makeText(MainActivity3.this,radioButton.getText(),Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void nextButton(View view) {
 
     }
 }
